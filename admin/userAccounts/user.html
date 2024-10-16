@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Account Table</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="user.css">
+</head>
+<body>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>User Account</th>
+                    <th>User ID</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- User Row 1 -->
+                <tr>
+                    <td>
+                        <div class="profile">
+                            <img src="https://placehold.co/50x50" alt="User profile picture of John Doe">
+                            <span class="profile-name">Jude Smith</span>
+                        </div>
+                    </td>
+                    <td>JohnDoe123</td>
+                    <td>
+                        <span class="status-active" id="status-1">Active</span>
+                        <div class="dropdown">
+                            <button onclick="toggleDropdown(this)"><i class="fas fa-chevron-down"></i></button>
+                            <div class="dropdown-content">
+                                <a href="#" onclick="setStatus('status-1', 'Deactivated')">Deactivated</a>
+                                <a href="#" onclick="deleteUser(this)">Delete</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <!-- User Row 2 -->
+                <tr>
+                    <td>
+                        <div class="profile">
+                            <img src="https://placehold.co/50x50" alt="User profile picture of Jane Smith">
+                            <span class="profile-name">Jane Smith</span>
+                        </div>
+                    </td>
+                    <td>JaneSmith456</td>
+                    <td>
+                        <span class="status-active" id="status-2">Active</span>
+                        <div class="dropdown">
+                            <button onclick="toggleDropdown(this)"><i class="fas fa-chevron-down"></i></button>
+                            <div class="dropdown-content">
+                                <a href="#" onclick="setStatus('status-2', 'Deactivated')">Deactivated</a>
+                                <a href="#" onclick="deleteUser(this)">Delete</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+
+    <script src="user.js"></script>
+</html>
+
+

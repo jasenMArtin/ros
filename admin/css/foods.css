@@ -1,0 +1,307 @@
+/* Existing styles */
+* {
+    font-family: 'Averia Serif Libre', serif;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+body {
+    background-color: #f4f4f4;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    overflow-x: auto;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    word-wrap: break-word;
+}
+
+th {
+    background-color: #bd5f20;
+    text-align: center;
+    color: #f1f1f1f3;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+#descriptionHeader {
+    padding-right: 8px;
+}
+
+td:nth-child(5) {
+    padding-right: 8px;
+}
+
+td:nth-child(6) {
+    padding-left: 8px;
+}
+
+td.actions {
+    padding: 50px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.button {
+    padding: 5px 10px;
+    margin: 2px;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.edit {
+    background-color: #f3a110;
+}
+
+.edit:hover {
+    background-color: rgba(255, 68, 0, 0.938);
+}
+
+.delete {
+    background-color: rgba(233, 21, 14, 0.938);
+}
+
+.delete:hover {
+    background-color: rgba(255, 68, 0, 0.938);
+}
+
+.actions {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+table td img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 70px;      
+}
+
+.modal-content {
+    background-color: #ffff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #d33d10;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 550px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 3px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+}
+
+/* Adjust the form group for spacing */
+.form-group {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 15px; /* Add space between elements in the form group */
+}
+
+.form-group label {
+    display: block;
+    width: 120px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="file"] {
+    flex: 1;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="number"]:focus,
+.form-group input[type="file"]:focus {
+    outline: none;
+    border: 1px solid rgba(75, 71, 71, 0.938);
+}
+
+/* Removed unnecessary margin adjustments for image upload */
+#imageUpload {
+    color: #000;
+}
+
+#currentImage {
+    display: none;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: -45px;
+    margin-right: 8px;
+}
+
+.modal-buttons button {
+    background-color: #e4410fd3;
+    padding: 6px;
+    border-radius: 2px;
+    transition: background-color 0.3s;
+}
+
+.modal-buttons button:hover {
+    background-color: #e0e0e0c5;
+}
+
+/* Mobile Responsiveness for Modal */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%; /* Full width on mobile */
+        max-width: 90%; /* Ensure it doesn’t exceed screen size */
+        margin: 10% auto; /* Center it with margin from the top */
+        padding: 15px; /* Adjust padding for better spacing */
+    }
+
+    .modal-buttons {
+        justify-content: center; /* Center buttons in the modal */
+        margin-top: 15px; /* Additional margin for spacing */
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    body {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .table-container {
+        overflow-x: auto; /* Ensure the table can scroll horizontally */
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    table {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+        word-wrap: break-word; /* Ensure long words wrap within the cell */
+    }
+
+    td:before {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 45%;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+
+    td:nth-child(1):before { content: "Items"; }
+    td:nth-child(2):before { content: "Images"; }
+    td:nth-child(3):before { content: "Names"; }
+    td:nth-child(4):before { content: "Categories"; }
+    td:nth-child(5):before { content: "Description"; }
+    td:nth-child(6):before { content: "Prices"; }
+
+    /* Ensure prices don't overlap */
+    td:nth-child(6) {
+        padding-left: 50%;
+        white-space: normal; /* Ensure long prices wrap */
+    }
+
+    /* Ensure description text is fully visible */
+    td:nth-child(5) {
+        white-space: normal; /* Allow text wrapping for long descriptions */
+        padding-bottom: 20px; /* Add padding to ensure the description is fully visible */
+    }
+
+    /* Center the 'Actions' label above the buttons */
+    td.actions {
+        text-align: center; /* Center the 'Actions' label */
+    }
+
+    td.actions:before {
+        content: "Actions"; /* Add the text "Actions" above the buttons */
+        position: relative;
+        display: block;
+        margin-bottom: 10px; /* Add space between the label and the buttons */
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    /* Align buttons horizontally */
+    .actions {
+        display: flex;
+        justify-content: flex-start; /* Align buttons to the left (default) */
+        gap: 10px; /* Space between buttons */
+    }
+
+    .modal-content {
+        width: 90%;
+        max-width: 300px;
+    }
+}

@@ -1,0 +1,315 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Averia Serif Libre', serif;
+}
+
+body.bg-gray {
+    background-color: #f7fafc; /* bg-gray-100 */
+    font-family: 'Averia Serif Libre', serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .container {
+        max-width: 100%; /* Full width for mobile */
+        padding: 10px; /* Reduce padding on mobile */
+
+    }
+
+    .heading {
+        font-size: 1.5em; /* Smaller heading size for mobile */
+        margin-bottom: 20px; /* Adjust margin */
+    }
+
+    .table th, .table td {
+        padding: 8px; /* Reduce padding for table cells on mobile */
+        font-size: 14px; /* Smaller text size for mobile */
+    }
+
+    .btn-reply, .delete-btn, .edit-btn, button {
+        font-size: 12px; /* Smaller button text size for mobile */
+        padding: 6px 10px; /* Adjust button padding */
+    }
+
+    .modal-content {
+        padding: 20px; /* Reduce padding in modals on mobile */
+        width: 95%; /* Full width for mobile */
+    }
+
+    textarea {
+        width: 100%; /* Full width textarea for mobile */
+        height: 80px; /* Adjust height for mobile */
+    }
+}
+
+.heading {
+    font-size: 2em; /* text-3xl */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 32px; /* mb-8 */
+}
+
+.table {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* shadow-lg */
+    border-radius: 8px; /* rounded-lg */
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 12px 16px; /* px-4 py-2 */
+    border: 1px solid #e2e8f0; /* border */
+    text-align: left;
+}
+
+.table th {
+    background-color: #ea580c; /* bg-orange-600 */
+    color: white;
+}
+
+.center {
+    text-align: center;
+}
+
+.comment {
+    color: #718096; /* text-gray-500 */
+    font-style: italic;
+}
+
+.star-rating {
+    display: flex;
+    justify-content: center;
+}
+
+.star-rating .fas {
+    color: #f59e0b; 
+}
+
+.btn-reply {
+    background-color: #c95e17d7;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    display: inline-flex; /* Align icon and text horizontally */
+  
+}
+
+.btn-reply i {
+    margin-right: 8px;
+}
+
+.btn-reply:hover {
+    background-color: rgba(255, 68, 0, 0.938);
+}
+
+#replies-wrapper {
+    margin-top: 20px; /* Adjust the space above the admin's table */
+}
+
+.delete-btn {
+    background-color: #c95e17d7;
+    border: none;
+    padding: 5px 15px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block; /* Change display to inline-block */
+    font-size: 14px;
+    margin: 0 5px; /* Add margin for spacing */
+}
+
+.delete-btn:hover {
+    background-color: rgba(255, 68, 0, 0.938);
+}
+
+/* Style for Edit Button */
+.edit-btn {
+    background-color: #f59e0b;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block; /* Change display to inline-block */
+    font-size: 14px;
+    margin-right: 10px; /* Add space to the right of the edit button */
+
+}
+
+.edit-btn:hover {
+    background-color: rgba(255, 68, 0, 0.938);
+}
+
+/* Icon and Text Styling */
+.btn-icon {
+    margin-right: 5px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 90%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 40px;
+}
+
+.modal-content {
+    background-color: #ffff;
+    margin: 5% auto;
+    padding: 40px;
+    border: 1px solid #d33d10;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px; /* Adjusted for better touch target */
+    right: 15px; /* Adjusted for better touch target */
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-heading {
+    font-size: 1.5em; /* text-2xl */
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #c95e17d7;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: rgba(255, 68, 0, 0.938);
+}
+
+/* Textarea styling */
+textarea {
+    width: 90%; /* Full width */
+    height: 90px; /* Set a height */
+    padding: 10px; /* Padding inside textarea */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1em; /* Font size */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+/* General Button Styles */
+button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    font-weight: bold; /* Make button text bold */
+}
+
+/* Yes Button */
+#yesButton {
+    background-color: rgba(255, 68, 0, 0.938);
+}
+
+#yesButton:hover {
+    background-color: #c95e17d7;
+    color: white;
+}
+
+/* No Button */
+#noButton {
+    background-color: #dc3545; /* Red for cancellation */
+}
+
+#noButton:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Save Button */
+#saveButton {
+    background-color: rgba(255, 68, 0, 0.938);
+}
+
+#saveButton:hover {
+    background-color: #c95e17d7;
+}
+
+/* Cancel Button */
+#cancelButton {
+    background-color: #dc3545; /* Red for cancellation */
+}
+
+#cancelButton:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Optional Disabled Button Style */
+button:disabled {
+    background-color: #ccc; /* Disabled button color */
+    cursor: not-allowed; /* Change cursor to not-allowed */
+}
+
+/* Modal Open */
+.modal.show {
+    display: flex;
+}
+
+  
+
