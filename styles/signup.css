@@ -1,0 +1,144 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    background-color: #f0f0f0; /* Optional background */
+}
+
+.container {
+    background: #ffffff;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    box-sizing: border-box;
+    max-width: 400px;
+    width: 100%; /* Ensure responsiveness */
+}
+
+/* Add this to ensure any form elements don't interfere with layout */
+form {
+    width: 100%;
+}
+
+
+
+.container h1 {
+    font-weight: bold;
+}
+
+.input-field-inline input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 130px;
+
+}
+.input-field-inline .code-input {
+    width: 60px;
+    margin-right: 5px;
+}
+.input-field-inline .number-input {
+    width: 200px; /* Adjusting for the margin-right and padding */
+}
+.input-field input {
+    width: 289px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Flexbox container for phone number, country code, and OTP input */
+.phone-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.country-code, .phone-number, .otp-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 40px;
+    box-sizing: border-box;
+}
+
+/* Ensure the fields are within a total of 289px width */
+.country-code {
+    margin-right: 5px;
+
+    flex: 1; /* Proportional width for country code */
+    max-width: 45px; /* Sets the maximum width for the country code */
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.phone-number {
+    flex: 2; /* Proportional width for phone number */
+    max-width: 150px; /* Maximum width for phone number field */
+}
+
+.otp-input {
+    flex: 1; /* Proportional width for OTP input */
+    max-width: 100px; /* Maximum width for OTP input */
+}
+
+.policy-link {
+    font-size: 14px;
+
+    text-decoration: none;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center the checkbox vertically with the label */
+    justify-content: flex-start; /* Align items to the left */
+}
+
+.policy-link input {
+    margin-right: 5px; /* Optional: Space between checkbox and label */
+}
+.policy-link a {
+    color: blue; /* Change text color to blue */
+    text-decoration: none; /* Remove underline */
+    
+}
+
+.policy-link a:hover {
+    text-decoration: underline; /* Optional: underline on hover for better UX */
+}
+
+
+.submit-button {
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 310.46px;
+}
+.submit-button:hover {
+    background-color: #ff8c00;
+}
+.login-link {
+    margin-top: 20px;
+    font-size: 14px;
+}
+.login-link a {
+    color: #0000ff;
+    text-decoration: none;
+}
+.login-link a:hover {
+    text-decoration: underline;
+}
+h1{
+
+    font-size: 24px;
+    
+}
+
+
+

@@ -1,0 +1,88 @@
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: space-between;
+    background: #ffebcd; /* Light beige color */
+    border: 2px solid #e56a00; /* Orange border */
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px; /* Space below the container */
+}
+.contact-info {
+    flex: 1; /* Takes up half of the container */
+    margin-right: 20px; /* Space between sections */
+    min-width: 250px; /* Minimum width for responsiveness */
+    color: #3e2723; /* Dark brown color */
+}
+
+.contact-info h2 {
+    margin-top: 0;
+    color: #d2691e; /* Chocolate color */
+    font-family: 'Garamond', serif; /* Elegant font for headings */
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-form {
+    flex: 1; /* Takes up half of the container */
+    min-width: 250px; /* Minimum width for responsiveness */
+}
+
+.input-field {
+    margin-bottom: 15px;
+}
+
+.input-field input,
+.input-field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #e56a00; /* Orange border for input */
+    border-radius: 4px;
+    background-color: #fff8e1; /* Light cream background */
+    font-family: 'Arial', sans-serif;
+}
+
+.submit-button {
+    background-color: #d2691e; /* Chocolate color */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold; /* Bold text */
+}
+
+.submit-button:hover {
+    background-color: #c65d32; /* Darker shade on hover */
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #3e2723; /* Dark brown color */
+    font-size: 24px;
+}
+
+.map-container {
+    width: 100%; /* Full width for the map */
+    margin-top: 20px; /* Space above the map */
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack columns on smaller screens */
+    }
+
+    .contact-info {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 20px; /* Space below contact info */
+    }
+}

@@ -1,0 +1,138 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Header styles */
+.header {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    position: relative;
+    z-index: 1000; /* Ensures navbar is above the background image */
+    width: 100%;
+    
+}
+/* Adjust the logo position */
+.logo {
+    position: absolute;
+    left: 150px; /* Adjust to move logo to the left */
+}
+
+/* Nav styles */
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Ensures header is above the background image */
+    background-color: transparent; /* or your desired color */
+    width: 100%;
+}
+.nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+.nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    /* font-weight: bold; */
+    font-size: 16px;
+}
+.nav ul li a:hover{
+    color: rgb(208, 76, 0);
+}
+
+/* Header icons (shopping bag and profile) */
+.header-icons {
+    color: #000000;
+    position: absolute;
+    right: 150px; /* Position icons on the right */
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between the shopping bag and profile icons */
+}
+.header-icons img {
+    max-width: 24px; /* Adjust icon size as needed */
+    height: auto;
+}
+.shopping-bag {
+    align-items: center;
+    text-decoration:none;
+    gap: 5px;
+    display: inline-block; /* Ensures icon and count are inline */
+}
+
+.item-count :active {
+    margin-left: 8px; /* Space between the icon and the number */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Default header styles */
+.header {
+    transition: background-color 0.1s, padding 0.1s, transform 0.3s;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9999; /* High z-index to ensure it's on top of other elements */
+}
+/* Styles when scrolled */
+.header.scrolled {
+    background-color: rgb(173, 40, 0); /* Background color changes on scroll */
+    transform: translateY(-5px);
+}
+
+.navbar {
+    transition: background-color 0.5s ease; /* Adjust duration and timing function as needed */
+}
+
+
+
+/* Custom styles for mobile navbar */
+@media (max-width: 767px) {
+    .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start; /* Space between items */
+        align-items: center; /* Center vertically */
+    }
+    .navbar-toggler {
+        margin-left: 10px; /* Adjust spacing from the left */
+    }
+    .navbar-brand {
+        margin-left: 1px; /* Add some space between the burger menu and the logo */
+    }
+    
+    .desktop-cart {
+        display: none !important; /* Hide the shopping bag on desktop */
+    }
+    .mobile-cart {
+        display: flex !important; /* Ensure the mobile cart is displayed */
+    }
+    
+    .mobile-profile {
+        display: flex !important; /* Hide the profile icon in the mobile view */
+    }
+    .desktop-profile{
+        display: none !important; /* Hide the shopping bag on desktop */
+    }
+    .navbar.scrolled {
+        background-color: rgb(173, 40, 0); /* The same background color you want */
+        transition: background-color 0.3s ease; /* Optional smooth transition */
+    }
+}
+
+
+@media (min-width: 768px) {
+    .mobile-cart {
+        display: none !important; /* Hide the shopping bag on desktop */
+    }
+
+    .mobile-profile {
+        display: none !important; /* Hide the profile icon on desktop */
+    }
+}
+
+        
+

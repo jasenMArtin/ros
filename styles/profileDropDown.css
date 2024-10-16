@@ -1,0 +1,44 @@
+/* Profile Dropdown Menu */
+.profile {
+    position: relative;
+    cursor: pointer; /* Make the profile clickable */
+}
+
+.dropdown-menu {
+    display: none; /* Hide the dropdown by default */
+    position: absolute;
+    top: 90%; /* Position below the profile */
+    right: 0; /* Align with the right edge */
+    background-color: white; /* Background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a floating effect */
+    border-radius: 5px; /* Rounded corners */
+    z-index: 1000; /* Ensure it appears above other elements */
+    width: 8em;
+    margin-top: 1em;
+}
+
+.dropdown-menu ul {
+    list-style: none; /* Remove list bullets */
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid #f0f0f0; /* Separator line */
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none; /* Remove separator from the last item */
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px; /* Padding for clickable area */
+    text-decoration: none;
+    color: #333; /* Text color */
+    font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0; /* Highlight on hover */
+}

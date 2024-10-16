@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Privacy Policy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../styles/privacy.css">
+</head>
+<body>
+
+<section class="flex_center">
+  <div class="tc_main">
+    <div class="tc_content">
+      <div class="tc_top">
+        <div class="title">
+          <p>Data Privacy Policy</p>
+        </div>
+        <div class="info">
+          By using <strong>Chilli's Restaurant Ordering System</strong>, I agree to the collection and use of my personal data for order processing and service purposes. I acknowledge that this data, which may include personal and sensitive information, will be handled in accordance with the <strong>Data Privacy Act of 2012</strong> and <strong>Chilli's Privacy Policy</strong>.
+        </div>      
+      </div>
+      <div class="tc_bottom">
+
+        <div class="info">
+          <p><strong>1. Data Collection: </strong> We collect your name, contact number, address, and order details to process and deliver your orders efficiently.</p>
+          <p><strong>2. Consent and Use: </strong> By using our system, you consent to the collection and use of your data for order processing, delivery, and customer service. Your data will not be shared with third parties without your consent.</p>
+          <p><strong>3. Data Protection: </strong> Your information is stored securely and protected from unauthorized access using encryption and secure servers.</p>
+          <p><strong>4. Retention: </strong> We only keep your personal data for as long as necessary to fulfill your order and provide services. It will be deleted or anonymized when no longer needed.</p>
+          <p><strong>5. Your Rights: </strong> You have the right to access, update, or request deletion of your personal information at any time.</p>
+          <p><strong>6. Breach Notification: </strong> In the event of a data breach, we will notify affected users and relevant authorities promptly.</p>
+        </div>        
+      </div>
+    </div>
+    <div class="tc_line"></div>
+    <div class="tc_btns">
+      <label>
+        <input type="checkbox" id="privacyCheck"> I have read and understood the Privacy Policy Statement
+      </label>
+      <button class="continue" disabled id="continueButton">
+        Continue
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const checkbox = document.getElementById('privacyCheck');
+    const continueButton = document.getElementById('continueButton');
+
+    checkbox.addEventListener('change', () => {
+      continueButton.disabled = !checkbox.checked; // Toggle button state
+      continueButton.style.backgroundColor = checkbox.checked ? 'var(--title-clr)' : ''; // Change button color
+      continueButton.style.color = checkbox.checked ? 'white' : ''; // Change button text color
+    });
+  });
+</script>
+
+</body>
+</html>
